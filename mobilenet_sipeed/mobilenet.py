@@ -281,18 +281,18 @@ def MobileNet(input_shape=None,
         else:
             alpha_text = '2_5'
 
-        if include_top:
-            model_name = 'mobilenet_%s_%d_tf.h5' % (alpha_text, rows)
-            weight_path = BASE_WEIGHT_PATH + model_name
-            weights_path = keras_utils.get_file(model_name,
-                                                weight_path,
-                                                cache_subdir='models')
-        else:
-            model_name = 'mobilenet_%s_%d_tf_no_top.h5' % (alpha_text, rows)
-            weight_path = BASE_WEIGHT_PATH + model_name
-            weights_path = keras_utils.get_file(model_name,
-                                                weight_path,
-                                                cache_subdir='models')
+        # if include_top:
+        #     model_name = 'mobilenet_%s_%d_tf.h5' % (alpha_text, rows)
+        #     weight_path = BASE_WEIGHT_PATH + model_name
+        #     weights_path = keras_utils.get_file(model_name,
+        #                                         weight_path,
+        #                                         cache_subdir='models')
+        # else:
+        #     model_name = 'mobilenet_%s_%d_tf_no_top.h5' % (alpha_text, rows)
+        #     weight_path = BASE_WEIGHT_PATH + model_name
+        #     weights_path = keras_utils.get_file(model_name,
+        #                                         weight_path,
+        #                                         cache_subdir='models')
         model.load_weights(weights_path)
     elif weights is not None:
         model.load_weights(weights)
