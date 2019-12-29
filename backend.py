@@ -249,7 +249,7 @@ class MobileNetFeature(BaseFeatureExtractor):
                               dropout=0.001, weights="imagenet",
                               classes=1000, include_top=False, backend=keras.backend,
                               layers=keras.layers, models=keras.models, utils=keras.utils)
-        mobilenet.load_weights(MOBILENET_BACKEND_PATH)
+        mobilenet.load_weights('mobilenet_7_5_224_tf_no_top.h5')
 
         x = mobilenet(input_image)
 
