@@ -1,3 +1,4 @@
+import keras
 from keras.models import Model
 import tensorflow as tf
 from keras.layers import Reshape, Activation, Conv2D, Input, MaxPooling2D, BatchNormalization, Flatten, Dense, Lambda
